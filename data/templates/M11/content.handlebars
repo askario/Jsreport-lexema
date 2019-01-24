@@ -1,0 +1,291 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Требование накладная(М11)</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <style type="text/css">
+        div {
+            font-family: Times New Roman;
+            /* outline: 1px solid #000; */
+        }
+
+        .Main {
+            margin: 0 auto;
+            width: 100%;
+            height: auto;
+            /*font-size: 9pt;*/
+        }
+
+        .HeaderTable tr td {
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+
+        p {
+            text-align: left;
+            text-indent: 20px;
+        }
+
+        .Org-Right .withBorders {
+            border-bottom: 1px solid black;
+            border-top: 1px solid black;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+        }
+
+        .HeaderTable {
+            width: 100%;
+            text-align: center;
+        }
+
+        table {
+            border-spacing: 0px;
+            border-collapse: separate;
+        }
+
+        .AdditionalTab {
+            width: 100%;
+            height: auto;
+        }
+
+        .GroupHeader {
+            /*margin-top:20px;*/
+            width: 100%;
+            height: auto;
+            page-break-inside: avoid !important;
+        }
+
+        .GroupHeader table tr td {
+            border: 1px solid black;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 8pt;
+            border-collapse: collapse;
+        }
+
+        .Signatures {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Main" height='auto'>
+        <div class="ReportHeader" style='float: right;width: 100%;height: auto;'>
+            <div class="ReportLabel" style="float: right;width: 100%;height: auto;font-size: 8pt;text-align: right">
+                Типовая межотраслевая форма № М-11
+                <br>
+                Утверждена постановлением Госкомстата России
+                <br>
+                от 30.10.97 №71а
+            </div>
+            <div class='Organization' id="OrgSelector" style='width: 100%;height:120px;'>
+                <div id="OrgForm" class="Org-Left" style="width:85%;height:auto;float: left;text-align:   center">
+                    <span><b>Требование накладная № {{getNumber Rows}}</b></span>
+                    <div style="width: 100%; margin-top: 10px;">
+                        <table style="width:100%;" cellspacing='0' cellpadding='0'>
+                            <tr>
+                                <td style="width:10%;text-align: left;font-size: 9pt;">Организация</td>
+                                <td style="width:90%;font-size: 9pt;text-align: left;vertical-align: top;">
+                                    {{getOrg1 Rows}}
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td></td>
+                                <td style='font-size: 9pt;text-align: left;vertical-align: top;border-bottom: 1px solid black;'>
+                                    {{getOrg2 Rows}}
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div id="OKUDForm" class="Org-Right" style="float:right;height: 10px;width: 15%;">
+                    <table id="HeaderRightTable" style="font-size:9pt;width: 100%;border-collapse: collapse;"
+                        cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td></td>
+                            <td class="withBorders" style="text-align: center;">Коды</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:right">Форма по ОКУД</td>
+                            <td class="withBorders" style="text-align: center;">0315006</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:right">по ОКПО</td>
+                            <td class="withBorders" style="text-align: center;">23157615</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="HeaderTableDiv" class="HeaderTable" style="height:120px;">
+                <table style="width:100%;text-align: center;font-size: 9pt;border-collapse: collapse;word-break: break-all;">
+                    <tr id='testAskar' style="height:30px;">
+                        <td rowspan="2">Дата<br>составления</td>
+                        <td rowspan="2">Код<br>вида</td>
+                        <td colspan="2">Отправитель</td>
+                        <td colspan="2">Получатель</td>
+                        <td colspan="2">Корреспондирующий счет</td>
+                        <td rowspan="2">Учетная<br>единица выпуска<br>продукции (работ,<br>услуг)</td>
+                    </tr>
+                    <tr>
+                        <td>структурное подразделение</td>
+                        <td>вид деятельности</td>
+                        <td>структурное подразделение</td>
+                        <td>вид деятельности</td>
+                        <td>счет,субсчет</td>
+                        <td>код аналитического учета</td>
+                    </tr>
+                    <tr style="height:30px;">
+                        <td style="width:6%;">11.02.2018</td>
+                        <td style="width:3%;"></td>
+                        <td style="width:15%;">СС.СОЗ-1120.1</td>
+                        <td style="width:10%;"></td>
+                        <td style="width:15%;">Обособленное подразделение (Выборгский район, пос. Кондратьево, д.1)</td>
+                        <td style="width:10%;"> </td>
+                        <td style="width:5%;"> </td>
+                        <td style="width:5%;"> </td>
+                        <td style="width:10%;"> </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="AdditionalTab">
+                <table style="width:100%;font-size: 9pt;text-align: center;">
+                    <tr>
+                        <td style="text-align:left;">Через кого</td>
+                        <td colspan="3" style="border-bottom: 1px solid black;text-align:left;">{{getAddTab Rows}}</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">Затребовал</td>
+                        <td style="border-bottom: 1px solid black;text-align:left;">{{getRequire Rows}}</td>
+                        <td>Разрешил</td>
+                        <td style="border-bottom: 1px solid black;text-align:left;">{{getAllowed Rows}}</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left;">Примечание</td>
+                        <td colspan=" 3" style="border-bottom: 1px solid black;text-align:left;vertical-align:bottom;">{{getGescription Rows}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width:12%;"></td>
+                        <td style="width:38%;"></td>
+                        <td style="width:12%;"></td>
+                        <td style="width:38%;"></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="Detail" class="GroupHeader">
+                <table id="DetailTable" style="width:100%;border-collapse: collapse;margin-top:30px;">
+                    <thead style="word-wrap: break-word;">
+                        <tr style="height:30px;">
+                            <td colspan="2">Корреспондирующий счет</td>
+                            <td colspan="2">Материальные ценности</td>
+                            <td colspan="2">Единица измерения</td>
+                            <td colspan="2">Количество</td>
+                            <td rowspan="2">Цена,руб.коп.</td>
+                            <td rowspan="2">Сумма без учета НДС,руб.коп.</td>
+                            <td rowspan="2">Порядковый номер по складской карточке</td>
+                        </tr>
+                        <tr>
+                            <td>счет,субсчет</td>
+                            <td>код аналитического учета</td>
+                            <td>наименование</td>
+                            <td>номенклатурный номер</td>
+                            <td>код</td>
+                            <td>наименование</td>
+                            <td>затребовано</td>
+                            <td>отпущено</td>
+                        </tr>
+                        <tr>
+                            <td style="width:5%">1</td>
+                            <td style="width:5%">2</td>
+                            <td style="width:23%">3</td>
+                            <td style="width:7%">4</td>
+                            <td style="width:5%">5</td>
+                            <td style="width:5%">6</td>
+                            <td style="width:5%">7</td>
+                            <td style="width:10%">8</td>
+                            <td style="width:10%">9</td>
+                            <td style="width:15%">10</td>
+                            <td style="width:10%">11</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each Rows}}
+                        <tr>
+                            <td>{{Кредит}}</td>
+                            <td></td>
+                            <td style="text-align:left;vertical-align:top;">{{Материал}}</td>
+                            <td>{{MaterialCode}}</td>
+                            <td>{{EICode}}</td>
+                            <td>{{EI}}</td>
+                            <td style="text-align:right;">{{parseQuantity Quantity}}</td>
+                            <td style="text-align:right;">{{parseQuantity Quantity}}</td>
+                            <td style="text-align:right;">{{parsePrice Price}}</td>
+                            <td style="text-align:right;">{{parseSumm Sum}}</td>
+                            <td></td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+
+                    <tr>
+                        <td colspan="6" style="border-bottom:0px;border-left:0px;border-right:0px;"></td>
+                        <td style="border-bottom:0px;border-left:0px;text-align: right;"><b>ИТОГО</b></td>
+                        <td style="text-align:right;">{{totalQuantity Rows}}</td>
+                        <td><b>X</b></td>
+                        <td style="text-align:right;vertical-align:bottom;">{{totalSum Rows}}</td>
+                        <td style="border-bottom:0px;border-left:0px;border-right:0px;"></td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="Signatures" style="page-break-inside:avoid">
+                <table style="width:100%;font-size: 9pt;text-align: center;vertical-align: bottom; border-spacing: 4px;">
+                    <tr>
+                        <td style="text-align:left;vertical-align:bottom;">Отпустил</td>
+                        <td style="vertical-align:bottom;">{{getSenderPost Rows}}</td>
+                        <td></td>
+                        <td style="vertical-align:bottom;">{{getSenderSign Rows}}</td>
+                        <td style="text-align:center;vertical-align:bottom;">Получил</td>
+                        <td>{{getReceiverPost Rows}}</td>
+                        <td></td>
+                        <td>{{getReceiverSign Rows}}</td>
+                    </tr>
+                    <tr style="font-size:7pt;">
+                        <td style="width:8%;"></td>
+                        <td style="width:14%;border-top: 1px solid black;vertical-align: top;"><i>(должность)</i></td>
+                        <td style="width:11%;border-top: 1px solid black;vertical-align: top;"><i>(подпись)</i></td>
+                        <td style="width:17%;border-top: 1px solid black;vertical-align: top;"><i>(расшифровка подписи)</i></td>
+                        <td style="width:8%"></td>
+                        <td style="width:14%;border-top: 1px solid black;vertical-align: top;"><i>(должность)</i></td>
+                        <td style="width:11%;border-top: 1px solid black;vertical-align: top;"><i>(подпись)</i></td>
+                        <td style="width:17%;border-top: 1px solid black;vertical-align: top;"><i>(расшифровка подписи)</i></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+    let rightBlockHeight = document.getElementById('OrgForm').offsetHeight + 10;
+    document.getElementById('OrgForm').style.height = 400 + 'px';
+    document.getElementById('OKUDForm').style.height = rightBlockHeight - 10 + 'px';
+    document.getElementById('testAskar').style.height+=100+'px';
+    let test = document.getElementById('OrgSelector');
+    // test.style.height += 200 + 'px';
+    //console.log(test);
+    var getHeightOfRow = function () {
+        let table = document.getElementById('DetailTable');
+        let tableRows = table.rows;
+        let length = tableRows.length;
+        if (length > 0) {
+            let height = tableRows[length - 1].offsetHeight;
+            let divElem = document.getElementById('DetailTable');
+             divElem.style.marginTop = 1200 + 'px';
+        }
+    }();
+</script>
+
+</html>

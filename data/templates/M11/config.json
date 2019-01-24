@@ -1,0 +1,34 @@
+{
+    "shortid": "ryOlnnSXE",
+    "name": "M11",
+    "recipe": "phantom-pdf",
+    "engine": "handlebars",
+    "chrome": {
+        "printBackground": true
+    },
+    "modificationDate": {
+        "$$date": 1548334250211
+    },
+    "_id": "zSEs03nTW1sGzhZH",
+    "$entitySet": "templates",
+    "phantom": {
+        "margin": "{\"top\":\"2cm\",\"left\":\"2cm\",\"right\":\"1cm\",\"bottom\":\"1cm\"}",
+        "orientation": "landscape",
+        "fitToPage": true,
+        "customPhantomJS": false,
+        "printDelay": "1000"
+    },
+    "data": {
+        "shortid": "BJv186Bm4"
+    },
+    "pdfOperations": [
+        {
+            "type": "merge"
+        }
+    ],
+    "scripts": [
+        {
+            "shortid": "BJtsrmPQE"
+        }
+    ]
+}
