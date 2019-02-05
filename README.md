@@ -1,1 +1,1 @@
-JSReport Test project for ecosoft-lexema
+Репозиторий с тестовой отчетной формой на основе JSReport.
