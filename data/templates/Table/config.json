@@ -1,0 +1,17 @@
+{
+    "shortid": "SyKzA4dm4",
+    "name": "Table",
+    "recipe": "html-to-xlsx",
+    "engine": "handlebars",
+    "chrome": {
+        "printBackground": true
+    },
+    "modificationDate": {
+        "$$date": 1548403187655
+    },
+    "_id": "951fKiMRkFMvNZaB",
+    "$entitySet": "templates",
+    "htmlToXlsx": {
+        "htmlEngine": "chrome"
+    }
+}

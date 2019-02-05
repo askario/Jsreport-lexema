@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+            <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+            <script src="http://code.highcharts.com/highcharts.js"></script>
+    </head>
+    <body>
+        <H1>Анализ отстатков на Складе №666</H1>
+<table>
+{{#each items}}
+    <tr>
+        <td>{{Count}}</td>
+        <td>{{Material}}</td>
+    </tr>
+{{/each}}
+</table>
+
+<div id='container'/>
+
+    </body>
+     <script>
+     var data = {{#toJSON this}}{{/toJSON}}    
+    $(function () {        
+        $('#container').highcharts({
+        chart: {
+            type: 'pie'
+        },
+        plotOptions: {
+            series: {
+                animation: false
+            }
+        },
+        title: null,
+        series: [{
+            name: 'Brands',
+            colorByPoint: true,
+            data: data.items.map(function(i) { return { name: i.Material, y : i.Count}; }) 
+        }]
+    });
+  });
+</script>
+</html>

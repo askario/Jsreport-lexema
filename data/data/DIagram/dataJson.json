@@ -1,0 +1,30 @@
+{
+    "items":[
+        {
+        "Count":22,
+        "Material":"Гайки"
+        
+    },
+            {
+        "Count":122,
+        "Material":"Болты"
+        
+    },
+    
+            {
+        "Count":28,
+        "Material":"Саморезы"
+        
+    },
+                {
+        "Count":18,
+        "Material":"Гвозди"
+        
+    },
+                    {
+        "Count":45,
+        "Material":"Молотки"
+        
+    }
+    ]
+}

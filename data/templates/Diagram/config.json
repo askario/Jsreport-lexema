@@ -1,0 +1,17 @@
+{
+    "shortid": "rJ-zMBOQN",
+    "name": "Diagram",
+    "recipe": "phantom-pdf",
+    "engine": "handlebars",
+    "chrome": {
+        "printBackground": true
+    },
+    "modificationDate": {
+        "$$date": 1548407342116
+    },
+    "_id": "b4K2TSV54YiJ9Ipo",
+    "$entitySet": "templates",
+    "data": {
+        "shortid": "HyAcfS_7V"
+    }
+}
